@@ -63,7 +63,7 @@ def get_arxiv_paper(query:str, debug:bool=False) -> list[ArxivPaper]:
             papers.extend(batch)
             # Add delay between batches to avoid rate limiting
             if i + 50 < len(all_paper_ids):
-                time.sleep(3)
+            time.sleep(3)
         bar.close()
 
     else:
